@@ -1,21 +1,27 @@
 'use client';
 
-import React from 'react';
+import Image from 'next/image';
 
 export interface ServiceCardProps {
   title: string;
   description: string;
-  icon: React.ReactElement; // ✅ Make sure this line exists
+  image: string; // ✅ Switched from 'icon' to 'image'
 }
 
-export function ServiceCard({ title, description, icon }: ServiceCardProps) {
+export function ServiceCard({ title, description, image }: ServiceCardProps) {
   return (
-    <div className="card w-full bg-base-100 shadow-xl p-6 hover:scale-105 transition-transform duration-300">
-      <div className="flex items-center space-x-4 mb-4">
-        <div className="text-primary text-4xl">{icon}</div>
-        <h3 className="text-2xl font-bold text-black">{title}</h3>
+    <div className="card w-full bg-sky-50 rounded-xl shadow-lg hover:shadow-2xl transition-transform duration-300 hover:scale-105 p-4">
+      <div className="w-full h-48 relative mb-4">
+        <Image
+          src={image}
+          alt={title}
+          layout="fill"
+          objectFit="cover"
+          className="rounded-lg"
+        />
       </div>
-      <p className="text-base-content">{description}</p>
+      <h3 className="text-2xl font-bold text-blue-700 mb-2">{title}</h3>
+      <p className="text-gray-700 text-base">{description}</p>
     </div>
   );
 }

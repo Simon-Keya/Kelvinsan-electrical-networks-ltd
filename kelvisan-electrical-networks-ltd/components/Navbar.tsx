@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export const Navbar = () => {
   return (
-    <div className="navbar bg-blue-100 shadow-md px-6 py-3 text-gray-800 flex justify-between items-center">
+    <div className="navbar bg-white shadow-md px-6 py-3 text-gray-800 flex justify-between items-center">
       
       {/* Left: Logo/Title */}
       <div>
@@ -24,7 +24,7 @@ export const Navbar = () => {
       <div className="flex gap-3">
         <Link href="/contact">
           <button className="btn btn-outline btn-info rounded-full">
-            Need Help? ❓
+            Need Help❓
           </button>
         </Link>
         <Link href="/hire">

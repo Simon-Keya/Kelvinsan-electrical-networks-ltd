@@ -7,8 +7,21 @@ import { Typewriter } from 'react-simple-typewriter';
 
 export const Hero = () => {
   return (
-    <section className="bg-base-100 min-h-screen flex items-center justify-center py-16">
-      <div className="container mx-auto flex flex-col-reverse md:flex-row items-center px-6 md:px-12 gap-12">
+    <section className="relative min-h-screen flex items-center justify-center py-16 shadow-lg border-b-4 border-blue-200 overflow-hidden">
+
+      {/* ✅ Background Image Wrapper (fixed absolute conflict) */}
+      <div className="absolute inset-0 w-full h-full z-0">
+        <Image
+          src="/background-hero.jpg"
+          alt="Background"
+          fill
+          priority
+          className="object-cover object-center"
+        />
+      </div>
+
+      {/* Content */}
+      <div className="relative z-20 container mx-auto flex flex-col-reverse md:flex-row items-center px-6 md:px-12 gap-12 text-white">
 
         {/* Left Content */}
         <motion.div
@@ -17,15 +30,13 @@ export const Hero = () => {
           transition={{ duration: 0.8 }}
           className="flex-1 space-y-6"
         >
-          {/* Stagnant Heading */}
-          <h1 className="text-4xl md:text-5xl font-extrabold leading-tight text-black">
+          <h1 className="text-4xl md:text-5xl font-extrabold leading-tight text-white drop-shadow-lg">
             Empowering Your Future with Reliable Networks and Innovative Software
           </h1>
 
-          {/* Typing Text */}
-          <h2 className="text-2xl md:text-3xl font-semibold text-black">
+          <h2 className="text-2xl md:text-3xl font-semibold text-white">
             We specialize in{' '}
-            <span className="text-blue-800">
+            <span className="text-blue-300">
               <Typewriter
                 words={[
                   'Electrical Installations',
@@ -45,8 +56,8 @@ export const Hero = () => {
             </span>
           </h2>
 
-          <p className="text-gray-700 text-lg md:text-xl">
-            At <span className="font-semibold text-blue-700">Kelvinsan Electrical Networks Ltd</span>, we design, implement, and manage top-quality electrical networking and software solutions tailored to elevate your business and ensure long-term efficiency.
+          <p className="text-gray-200 text-lg md:text-xl">
+            At <span className="font-semibold text-blue-300">Kelvinsan Electrical Networks Ltd</span>, we design, implement, and manage top-quality electrical networking and software solutions tailored to elevate your business and ensure long-term efficiency.
           </p>
 
           <div className="flex flex-wrap gap-4 mt-8">
@@ -58,14 +69,14 @@ export const Hero = () => {
             </Link>
             <Link
               href="/contact"
-              className="px-6 py-3 rounded-lg border-2 border-blue-700 text-blue-700 font-semibold hover:bg-blue-700 hover:text-white transition duration-300 shadow-md"
+              className="px-6 py-3 rounded-lg border-2 border-blue-300 text-blue-300 font-semibold hover:bg-blue-700 hover:text-white transition duration-300 shadow-md"
             >
               Get in Touch
             </Link>
           </div>
         </motion.div>
 
-        {/* Right Content (Image) */}
+        {/* Right Content (Hero Image) */}
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -73,7 +84,7 @@ export const Hero = () => {
           className="flex-1 flex justify-center"
         >
           <Image
-            src="/hero-image.svg"
+            src="/hero-image.jpg"
             alt="Electrical Networks and Software Development"
             width={500}
             height={500}
