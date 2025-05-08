@@ -1,12 +1,26 @@
 'use client';
 
+import Image from 'next/image';
 import { ServiceCard } from './ServiceCard';
 
 export function Services() {
   return (
-    <section className="py-20 bg-sky-50" id="services">
-      <div className="container mx-auto px-6 text-center">
-        <h2 className="text-4xl md:text-5xl font-extrabold text-blue-700 mb-12 border-b-4 border-blue-500 inline-block pb-2">
+    <section className="relative min-h-screen flex items-center justify-center py-20 shadow-lg border-b-4 border-blue-200 overflow-hidden" id="services">
+      
+      {/* ✅ Background Image Wrapper */}
+      <div className="absolute inset-0 w-full h-full z-0">
+        <Image
+          src="/service.jpg"
+          alt="Services Background"
+          fill
+          priority
+          className="object-cover object-center"
+        />
+      </div>
+
+      {/* ✅ Content Wrapper */}
+      <div className="relative z-10 container mx-auto px-6 text-center">
+        <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-12 border-b-4 border-white inline-block pb-2">
           Our Services
         </h2>
 
@@ -33,6 +47,7 @@ export function Services() {
           />
         </div>
       </div>
+
     </section>
   );
 }

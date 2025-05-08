@@ -4,20 +4,20 @@ import Link from 'next/link';
 
 export const Navbar = () => {
   return (
-    <div className="navbar bg-white shadow-md px-6 py-3 text-gray-800 flex justify-between items-center">
+    <div className="navbar bg-teal-700 shadow-md px-6 py-3 text-white flex justify-between items-center">
       
       {/* Left: Logo/Title */}
       <div>
-        <Link href="/" className="btn btn-ghost text-3xl text-blue-800 font-extrabold tracking-wide">
+        <Link href="/" className="btn btn-ghost text-3xl text-black font-extrabold tracking-wide">
           Kelvinsan
         </Link>
       </div>
 
       {/* Center: Navigation Links in a Row */}
       <div className="hidden md:flex gap-10 text-lg font-medium">
-        <Link href="/projects" className="hover:text-blue-700 transition">Projects</Link>
-        <Link href="/services" className="hover:text-blue-700 transition">Services</Link>
         <Link href="/about" className="hover:text-blue-700 transition">About Us</Link>
+        <Link href="/services" className="hover:text-blue-700 transition">Services</Link>
+        <Link href="/contact" className="hover:text-blue-700 transition">Contact</Link>
       </div>
 
       {/* Right: Buttons in a Row */}
@@ -27,7 +27,7 @@ export const Navbar = () => {
             Need Help❓
           </button>
         </Link>
-        <Link href="/hire">
+        <Link href="/about">
           <button className="btn btn-primary rounded-full">
             Hire Us
           </button>
