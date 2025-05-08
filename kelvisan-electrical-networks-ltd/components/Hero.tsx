@@ -25,15 +25,15 @@ export const Hero = () => {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="relative z-20 w-full px-6 md:px-12 text-center text-black space-y-8"
+        className="relative z-20 w-full px-6 md:px-12 text-center text-blue-700 space-y-8"
       >
-        <h1 className="text-3xl md:text-5xl font-extrabold leading-tight text-black drop-shadow-lg">
+        <h1 className="text-3xl md:text-5xl font-extrabold leading-tight text-blue-700 drop-shadow-lg">
           Empowering Your Future with Reliable Networks and Innovative Software
         </h1>
 
-        <h2 className="text-2xl md:text-4xl font-semibold text-white">
+        <h2 className="text-2xl md:text-4xl font-semibold text-black">
           We specialize in{' '}
-          <span className="text-black">
+          <span className="text-white">
             <Typewriter
               words={[
                 'Electrical Installations',
@@ -53,8 +53,8 @@ export const Hero = () => {
           </span>
         </h2>
 
-        <p className="text-black text-lg md:text-2xl max-w-5xl mx-auto">
-          At <span className="font-semibold text-teal-600">Kelvinsan Electrical Networks Ltd</span>, we design, implement, and manage top-quality electrical networking and software solutions tailored to elevate your business and ensure long-term efficiency.
+        <p className="text-white text-lg md:text-2xl max-w-5xl mx-auto">
+          At <span className="font-semibold text-blue-500">Kelvinsan Electrical Networks Ltd</span>, we design, implement, and manage top-quality electrical networking and software solutions tailored to elevate your business and ensure long-term efficiency.
         </p>
 
         <div className="flex flex-wrap justify-center gap-4 mt-6">

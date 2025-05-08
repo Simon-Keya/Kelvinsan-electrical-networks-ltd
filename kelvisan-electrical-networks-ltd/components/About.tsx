@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 export const About = () => {
   return (
-    <section className="min-h-screen py-16 bg-sky-50">
+    <section className="min-h-screen py-16 bg-sky-100">
       <div className="container mx-auto px-6 md:px-12">
 
         {/* Page Title */}
@@ -64,7 +64,7 @@ export const About = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
-              className="flex-1 bg-teal-100 border border-gray-200 hover:border-blue-400 hover:bg-gray-50 shadow hover:shadow-xl transition-all duration-300 group rounded-none"
+              className="flex-1 bg-teal-200 border border-gray-200 hover:border-blue-400 hover:bg-teal-200 shadow hover:shadow-xl transition-all duration-300 group rounded-none"
             >
               <div className="p-6 flex flex-col items-center text-center space-y-2 h-full">
                 {card.icon}
