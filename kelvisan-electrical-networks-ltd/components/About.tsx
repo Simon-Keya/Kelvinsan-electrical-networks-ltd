@@ -1,7 +1,8 @@
 'use client';
 
-import { EyeIcon, LightBulbIcon, StarIcon } from '@heroicons/react/24/outline';
+import { CheckCircleIcon, EyeIcon, LightBulbIcon, StarIcon } from '@heroicons/react/24/outline';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 export const About = () => {
   return (
@@ -18,70 +19,88 @@ export const About = () => {
           Our Company
         </motion.h1>
 
-        {/* Who We Are Section */}
+        {/* Who We Are */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="space-y-6 text-gray-900 max-w-5xl mx-auto mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 border-b-2 border-gray-300 pb-2">
+          <h2 className="text-3xl md:text-4xl font-bold border-b-2 border-gray-300 pb-2">
             Who Are We
           </h2>
           <p className="text-lg leading-relaxed">
             <span className="font-semibold text-gray-800">Kelvinsan Electrical Networks Ltd</span> is a leading provider of comprehensive electrical, networking, and software solutions based in Kenya. Since our inception, we have committed ourselves to delivering top-notch services that combine innovation, reliability, and long-term value for both businesses and individuals.
           </p>
+          <p className="text-lg leading-relaxed">
+            Our team consists of certified engineers, software developers, and network technicians who collaborate to provide seamless project execution, from consultation and design to implementation and support.
+          </p>
         </motion.div>
 
         {/* Mission, Vision, Core Values */}
-        <div className="flex flex-col md:flex-row gap-8 mb-16">
+        <div className="grid md:grid-cols-3 gap-6 mb-20">
           {[
             {
               title: 'Our Mission',
-              icon: <LightBulbIcon className="w-4 h-4 text-gray-700 group-hover:text-blue-500 transition duration-300 mb-2" />,
+              icon: LightBulbIcon,
               text: 'Empower businesses and individuals through innovative electrical, networking, and software solutions that ensure efficiency, security, and sustainable growth.',
             },
             {
               title: 'Our Vision',
-              icon: <EyeIcon className="w-4 h-4 text-gray-700 group-hover:text-blue-500 transition duration-300 mb-2" />,
-              text: 'To be East Africa’s most trusted provider of cutting-edge electrical and IT infrastructure solutions — setting new standards in quality, innovation, and customer satisfaction.',
+              icon: EyeIcon,
+              text: 'To be East Africa’s most trusted provider of cutting-edge infrastructure solutions — setting new benchmarks in innovation, quality, and reliability.',
             },
             {
               title: 'Our Core Values',
-              icon: <StarIcon className="w-4 h-4 text-gray-700 group-hover:text-blue-500 transition duration-300 mb-2" />,
+              icon: StarIcon,
               text: (
-                <ul className="space-y-1 text-left text-gray-900">
+                <ul className="space-y-1 text-left">
                   <li>✓ Integrity</li>
                   <li>✓ Innovation</li>
                   <li>✓ Excellence</li>
-                  <li>✓ Customer Focus</li>
+                  <li>✓ Customer-Centric Approach</li>
                 </ul>
               ),
             },
-          ].map((card, index) => (
+          ].map((item, i) => (
             <motion.div
-              key={index}
+              key={i}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
-              className="flex-1 bg-teal-200 border border-gray-200 hover:border-blue-400 hover:bg-teal-200 shadow hover:shadow-xl transition-all duration-300 group rounded-none"
+              transition={{ duration: 0.8, delay: i * 0.1 }}
+              className="bg-teal-200 border border-gray-200 rounded-lg shadow hover:shadow-lg p-6 text-center transition duration-300"
             >
-              <div className="p-6 flex flex-col items-center text-center space-y-2 h-full">
-                {card.icon}
-                <h3 className="text-lg font-semibold text-gray-900">{card.title}</h3>
-                <p className="text-gray-900 text-base leading-relaxed">{card.text}</p>
-              </div>
+              <item.icon className="w-8 h-8 mx-auto mb-4 text-blue-600" />
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">{item.title}</h3>
+              <div className="text-gray-700 text-base">{item.text}</div>
             </motion.div>
           ))}
         </div>
 
-        {/* Why Choose Us Section */}
+        {/* Achievements and Certifications */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="mb-20 max-w-5xl mx-auto"
+        >
+          <h2 className="text-3xl font-bold text-gray-800 border-b-2 border-gray-300 pb-2 mb-6">
+            Certifications & Achievements
+          </h2>
+          <ul className="grid sm:grid-cols-2 gap-4 text-lg text-gray-800 list-disc list-inside">
+            <li>Licensed by Kenya Energy Regulatory Authority</li>
+            <li>Certified Cisco Network Professionals (CCNP)</li>
+            <li>ISO 9001:2015 Quality Management Compliance</li>
+          </ul>
+        </motion.div>
+
+        {/* Why Choose Us */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="flex flex-col-reverse lg:flex-row items-center gap-12 mb-20"
+          className="flex flex-col-reverse lg:flex-row items-center gap-12"
         >
           {/* Text Content */}
           <div className="flex-1 space-y-6">
@@ -89,31 +108,35 @@ export const About = () => {
               Why Choose Us?
             </h2>
             <p className="text-lg text-gray-900 leading-relaxed">
-              Choosing Kelvinsan Electrical Networks Ltd means partnering with a team that is passionate about delivering quality, reliability, and innovation. Here’s what sets us apart:
+              With a passion for excellence and a commitment to innovation, we deliver results that exceed expectations.
             </p>
-            <ul className="space-y-2 text-gray-900 list-disc list-inside">
-              <li>✅ Proven track record of successful projects</li>
-              <li>✅ Highly qualified and certified professionals</li>
-              <li>✅ End-to-end solutions from consultation to execution</li>
-              <li>✅ Commitment to customer satisfaction and long-term support</li>
+            <ul className="space-y-2 text-gray-900">
+              <li><CheckCircleIcon className="inline w-5 h-5 mr-2 text-blue-600" />5+ years of industry experience</li>
+              <li><CheckCircleIcon className="inline w-5 h-5 mr-2 text-blue-600" />Fully certified, insured, and licensed</li>
+              <li><CheckCircleIcon className="inline w-5 h-5 mr-2 text-blue-600" />24/7 customer support availability</li>
+              <li><CheckCircleIcon className="inline w-5 h-5 mr-2 text-blue-600" />Client-first project approach</li>
             </ul>
 
             {/* CTA Buttons */}
             <div className="mt-6 flex flex-wrap gap-4">
-              <button className="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition duration-300 shadow">
-                Contact Us
-              </button>
-              <button className="bg-white border border-blue-600 text-blue-600 px-6 py-3 rounded hover:bg-blue-50 transition duration-300 shadow">
-                Learn More
-              </button>
+              <Link href="/contact">
+                <button className="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition duration-300 shadow">
+                  Contact Us
+                </button>
+              </Link>
+              <Link href="/services">
+                <button className="bg-white border border-blue-600 text-blue-600 px-6 py-3 rounded hover:bg-blue-50 transition duration-300 shadow">
+                  Learn More
+                </button>
+              </Link>
             </div>
           </div>
 
-          {/* Image with subtle hover zoom effect */}
+          {/* Image */}
           <div className="flex-1 overflow-hidden rounded-lg shadow-lg group">
             <img
-              src="/company-team.jpg" // Replace with your actual image path
-              alt="Our Team at Work"
+              src="/company-team.jpg"
+              alt="Our Team"
               className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
             />
           </div>

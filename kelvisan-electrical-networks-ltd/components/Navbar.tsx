@@ -8,7 +8,7 @@ export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-teal-700 shadow-md text-white">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-teal-700 shadow-md text-white">
       <div className="container mx-auto flex justify-between items-center px-6 py-4">
         
         {/* Logo/Title */}
@@ -18,9 +18,10 @@ export const Navbar = () => {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex gap-10 text-lg font-medium">
-          <Link href="/about" className="hover:text-blue-200 transition">About Us</Link>
-          <Link href="/services" className="hover:text-blue-200 transition">Services</Link>
-          <Link href="/contact" className="hover:text-blue-200 transition">Contact</Link>
+          <Link href="/" className="hover:text-blue-400 transition">Home</Link>
+          <Link href="/about" className="hover:text-blue-400 transition">About Us</Link>
+          <Link href="/services" className="hover:text-blue-400 transition">Services</Link>
+          <Link href="/contact" className="hover:text-blue-400 transition">Contact</Link>
         </div>
 
         {/* Desktop Buttons */}

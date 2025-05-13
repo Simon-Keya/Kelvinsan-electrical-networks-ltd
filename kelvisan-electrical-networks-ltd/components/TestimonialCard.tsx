@@ -7,11 +7,13 @@ interface TestimonialCardProps {
 
 export const TestimonialCard = ({ name, feedback }: TestimonialCardProps) => {
   return (
-    <div className="card bg-base-100 shadow-md hover:shadow-xl transition duration-300">
-      <div className="card-body items-center text-center">
-        <p className="text-base-content mb-4">&ldquo;{feedback}&rdquo;</p>
-        <h3 className="font-bold text-primary">{name}</h3>
-      </div>
+    <div className="bg-white dark:bg-gray-900 shadow-lg hover:shadow-2xl transition-shadow duration-300 rounded-xl p-6 border border-gray-100 dark:border-gray-800">
+      <p className="text-gray-600 dark:text-gray-300 italic mb-4 leading-relaxed">
+        &ldquo;{feedback}&rdquo;
+      </p>
+      <h3 className="text-lg font-semibold text-teal-600 dark:text-teal-400 text-right">
+        — {name}
+      </h3>
     </div>
   );
 };

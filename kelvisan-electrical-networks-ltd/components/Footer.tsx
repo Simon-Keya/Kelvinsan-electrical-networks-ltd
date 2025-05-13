@@ -25,6 +25,11 @@ export const Footer = () => {
             <h3 className="text-lg font-semibold mb-2">Quick Links</h3>
             <ul className="space-y-2">
               <li>
+                <Link href="/" className="hover:text-primary">
+                  <span>Home</span>
+                </Link>
+              </li>
+              <li>
                 <Link href="/about" className="hover:text-primary">
                   <span>About Us</span>
                 </Link>
@@ -32,11 +37,6 @@ export const Footer = () => {
               <li>
                 <Link href="/services" className="hover:text-primary">
                   <span>Services</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/projects" className="hover:text-primary">
-                  <span>Projects</span>
                 </Link>
               </li>
               <li>
@@ -52,7 +52,7 @@ export const Footer = () => {
             <h3 className="text-lg font-semibold mb-2">Contact</h3>
             <ul className="space-y-2 text-sm">
               <li>Email: <a href="mailto:info@kelvinsan.com" className="hover:text-primary">info@kelvinsan.com</a></li>
-              <li>Phone: <a href="tel:+254700123456" className="hover:text-primary">+254 700 123 456</a></li>
+              <li>Phone: <a href="tel:+254711762682" className="hover:text-primary">+ 254711762682</a></li>
               <li>Address: Nairobi, Kenya</li>
             </ul>
 
@@ -64,7 +64,7 @@ export const Footer = () => {
               <a href="mailto:info@kelvinsan.com" className="text-2xl hover:text-primary">
                 <FaEnvelope />
               </a>
-              <a href="https://wa.me/254700123456" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-primary">
+              <a href="https://wa.me/254711762682" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-primary">
                 <FaWhatsapp />
               </a>
             </div>

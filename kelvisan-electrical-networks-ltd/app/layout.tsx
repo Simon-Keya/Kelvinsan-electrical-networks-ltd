@@ -11,9 +11,12 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="bg-base-100 text-base-content font-sans">
+      <body className="bg-base-100 text-base-content font-sans min-h-screen flex flex-col">
         <Navbar />
-        <main className="min-h-screen px-4 sm:px-8 md:px-16">{children}</main>
+        {/* Added padding-top to offset the fixed navbar height */}
+        <main className="flex-1 w-full px-4 sm:px-8 md:px-12 pt-20">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

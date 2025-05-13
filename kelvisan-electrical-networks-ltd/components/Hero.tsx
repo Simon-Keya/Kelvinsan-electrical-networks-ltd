@@ -60,7 +60,7 @@ export const Hero = () => {
         <div className="flex flex-wrap justify-center gap-4 mt-6">
           <Link
             href="/services"
-            className="px-8 py-4 rounded-lg bg-blue-400 text-black font-semibold hover:bg-blue-500 transition duration-300 shadow-md text-lg"
+            className="px-8 py-4 rounded-lg bg-blue-500 text-black font-semibold hover:bg-blue-500 transition duration-300 shadow-md text-lg"
           >
             Explore Services
           </Link>

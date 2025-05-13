@@ -1,28 +1,31 @@
 'use client';
 
-import { BoltIcon, ChatBubbleLeftRightIcon, GlobeAltIcon, LightBulbIcon, ServerStackIcon, ShieldCheckIcon, SparklesIcon, WrenchScrewdriverIcon } from '@heroicons/react/24/outline';
-import Image from 'next/image';
+import {
+  BoltIcon,
+  ChatBubbleLeftRightIcon,
+  GlobeAltIcon,
+  LightBulbIcon,
+  ServerStackIcon,
+  ShieldCheckIcon,
+  SparklesIcon,
+  WrenchScrewdriverIcon
+} from '@heroicons/react/24/outline';
 import { ServiceCard } from './ServiceCard';
 
 export function Services() {
   return (
-    <section
-      className="relative min-h-screen flex items-center justify-center py-24 overflow-hidden"
-      id="services"
-    >
-      {/* ✅ Background Image with Gradient Overlay */}
+    <section className="relative min-h-screen flex items-center justify-center py-24 overflow-hidden" id="services">
+      
+      {/* ✅ Native Background Image */}
       <div className="absolute inset-0 w-full h-full z-0">
-        <Image
+        <img
           src="/service.jpg"
           alt="Services Background"
-          fill
-          priority
-          className="object-cover object-center brightness-75"
+          className="w-full h-full object-cover object-center brightness-75"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80"></div>
       </div>
 
-      {/* ✅ Content Wrapper */}
       <div className="relative z-10 container mx-auto px-6 text-center text-white">
         <h2 className="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight">
           Our Services
@@ -41,21 +44,18 @@ export function Services() {
             description="Comprehensive electrical wiring, lighting, and panel installations for residential, commercial, and industrial properties—ensuring safety, compliance, and durability."
             image="/services/electrical.jpg"
             icon={<BoltIcon className="w-8 h-8 text-yellow-400" />}
-            cta="Learn More"
           />
           <ServiceCard
             title="Power Backup Systems"
             description="Tailored inverter systems, high-capacity UPS units, and solar power installations to guarantee uninterrupted power supply during outages and emergencies."
             image="/services/power-backup.jpg"
             icon={<ShieldCheckIcon className="w-8 h-8 text-green-400" />}
-            cta="Explore Options"
           />
           <ServiceCard
             title="Electrical Maintenance"
             description="Regular inspections, preventive maintenance, and troubleshooting services to enhance the lifespan and safety of your electrical infrastructure."
             image="/services/maintenance.jpg"
             icon={<WrenchScrewdriverIcon className="w-8 h-8 text-orange-400" />}
-            cta="Book Now"
           />
         </div>
 
@@ -69,21 +69,18 @@ export function Services() {
             description="Robust structured cabling, enterprise-grade WiFi, and network security solutions to keep your organization reliably connected and secure."
             image="/services/networking.jpg"
             icon={<GlobeAltIcon className="w-8 h-8 text-blue-400" />}
-            cta="Get Connected"
           />
           <ServiceCard
             title="Server & Data Solutions"
             description="Installation and management of cloud servers, on-premises databases, and scalable storage solutions to streamline your business operations."
             image="/services/server.jpg"
             icon={<ServerStackIcon className="w-8 h-8 text-purple-400" />}
-            cta="Discover More"
           />
           <ServiceCard
             title="IT Support & Consultancy"
             description="Proactive IT support, cybersecurity audits, and strategic consultancy to optimize your technology stack and safeguard your digital assets."
             image="/services/it-support.jpg"
             icon={<ChatBubbleLeftRightIcon className="w-8 h-8 text-cyan-400" />}
-            cta="Consult Now"
           />
         </div>
 
@@ -97,14 +94,12 @@ export function Services() {
             description="Bespoke software, web applications, and mobile apps designed to automate workflows, enhance customer experience, and scale with your business."
             image="/services/software.jpg"
             icon={<SparklesIcon className="w-8 h-8 text-pink-400" />}
-            cta="Start Building"
           />
           <ServiceCard
             title="Smart Home & IoT Solutions"
             description="Integration of smart devices, automation systems, and IoT networks that offer convenience, energy efficiency, and enhanced security for modern living."
             image="/services/smart-home.jpg"
             icon={<LightBulbIcon className="w-8 h-8 text-lime-400" />}
-            cta="See Solutions"
           />
         </div>
 
