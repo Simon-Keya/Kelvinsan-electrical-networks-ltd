@@ -50,13 +50,13 @@ export function ContactForm() {
   };
 
   return (
-    <section className="w-full bg-gradient-to-br from-gray-100 via-blue-200 to-purple-300 py-16 px-6">
+    <section className="w-full bg-gradient-to-br from-sky-100 via-blue-200 to-purple-300 py-16 px-6">
       <Toaster position="top-center" reverseOrder={false} />
-      <div className="max-w-2xl mx-auto bg-blue-100 backdrop-blur-md border border-gray-200 shadow-xl rounded-2xl p-8 md:p-10">
+      <div className="max-w-2xl mx-auto bg-blue-300 backdrop-blur-md border border-gray-400 shadow-xl rounded-2xl p-8 md:p-10">
         <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-4">
           Let us Connect
         </h2>
-        <p className="text-center text-gray-600 mb-8">
+        <p className="text-center text-black mb-8">
           Have a question or a project in mind? Fill in the form and we will respond shortly.
         </p>
 
@@ -120,7 +120,7 @@ export function ContactForm() {
             disabled={loading}
             className={`w-full ${
               loading ? 'opacity-60 cursor-not-allowed' : ''
-            } bg-gradient-to-r from-sky-400 to-indigo-500 hover:from-sky-500 hover:to-indigo-600 text-white font-semibold py-3 rounded-full transition duration-300 shadow-md hover:shadow-lg tracking-wide`}
+            } bg-gradient-to-r from-sky-400 to-indigo-500 hover:from-sky-600 hover:to-indigo-500 text-white font-semibold py-3 rounded-full transition duration-300 shadow-md hover:shadow-lg tracking-wide`}
           >
             {loading ? 'Sending...' : 'Send Message'}
           </button>
