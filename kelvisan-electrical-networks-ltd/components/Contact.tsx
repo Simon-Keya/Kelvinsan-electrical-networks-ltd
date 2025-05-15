@@ -56,7 +56,7 @@ export default function Contact() {
             </div>
 
             {/* Contact Details */}
-            <div className="card bg-blue-300 shadow-lg p-6 rounded-xl border border-gray-200">
+            <div className="card bg-blue-200 shadow-lg p-6 rounded-xl border border-gray-200">
               <h2 className="text-2xl font-semibold text-primary mb-4">
                 Contact Information
               </h2>
@@ -89,7 +89,7 @@ export default function Contact() {
             </div>
 
             {/* Business Hours Note */}
-            <div className="bg-blue-300 border border-gray-200 p-4 rounded-lg text-sm text-gray-700 shadow-sm">
+            <div className="bg-blue-200 border border-gray-200 p-4 rounded-lg text-sm text-gray-700 shadow-sm">
               <p>
                 ⏰ <strong>Business Hours:</strong><br />
                 Monday – Friday: 9:00 AM – 6:00 PM<br />

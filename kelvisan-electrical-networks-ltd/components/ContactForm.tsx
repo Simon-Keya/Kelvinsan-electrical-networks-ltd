@@ -52,7 +52,7 @@ export function ContactForm() {
   return (
     <section className="w-full bg-gradient-to-br from-sky-100 via-blue-200 to-purple-300 py-16 px-6">
       <Toaster position="top-center" reverseOrder={false} />
-      <div className="max-w-2xl mx-auto bg-blue-300 backdrop-blur-md border border-gray-400 shadow-xl rounded-2xl p-8 md:p-10">
+      <div className="max-w-2xl mx-auto bg-blue-200 backdrop-blur-md border border-gray-400 shadow-xl rounded-2xl p-8 md:p-10">
         <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-4">
           Let us Connect
         </h2>
