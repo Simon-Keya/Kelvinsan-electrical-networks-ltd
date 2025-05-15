@@ -1,11 +1,11 @@
 'use client';
 
-import { ContactForm } from '../../components/ContactForm';
+import Contact from '../../components/Contact';
 
 export default function ContactPage() {
   return (
     <main className="min-h-screen bg-white">
-      <ContactForm />
+      <Contact />``
     </main>
   );
 }

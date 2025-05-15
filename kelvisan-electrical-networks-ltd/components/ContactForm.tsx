@@ -50,18 +50,17 @@ export function ContactForm() {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 py-20 px-6 animate-fadeIn">
+    <section className="w-full bg-gradient-to-br from-gray-100 via-blue-200 to-purple-300 py-16 px-6">
       <Toaster position="top-center" reverseOrder={false} />
-      <div className="w-full max-w-3xl bg-white/40 backdrop-blur-lg rounded-3xl shadow-2xl border border-white/20 p-10 md:p-14 transition-all duration-300">
-        <h2 className="text-4xl font-extrabold text-center text-black text-primary mb-8 tracking-tight drop-shadow-lg">
-          Get in Touch
+      <div className="max-w-2xl mx-auto bg-blue-100 backdrop-blur-md border border-gray-200 shadow-xl rounded-2xl p-8 md:p-10">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-4">
+          Let us Connect
         </h2>
-        <p className="text-center text-gray-700 text-lg mb-10 max-w-xl mx-auto">
-          We would love to hear from you! Whether you have a question, a project idea, or just want to say hello — drop us a message below and we will get back to you shortly.
+        <p className="text-center text-gray-600 mb-8">
+          Have a question or a project in mind? Fill in the form and we will respond shortly.
         </p>
 
-        <form onSubmit={handleSubmit} className="space-y-8 text-black">
-          {/* Floating Name Field */}
+        <form onSubmit={handleSubmit} className="space-y-6">
           <div className="relative">
             <input
               type="text"
@@ -69,16 +68,15 @@ export function ContactForm() {
               value={formData.name}
               onChange={handleChange}
               required
-              className="peer w-full pl-12 pr-4 pt-5 pb-2 rounded-xl bg-white/80 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent shadow-sm placeholder-transparent transition"
               placeholder="Your Name"
+              className="peer w-full pl-11 pr-4 py-3 rounded-lg border border-gray-300 bg-white placeholder-transparent focus:outline-none focus:ring-2 focus:ring-blue-400 shadow-sm transition"
             />
-            <UserIcon className="absolute left-4 top-4 w-5 h-5 text-primary" />
-            <label className="absolute left-12 top-2 text-gray-600 text-sm peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 transition-all peer-focus:top-2 peer-focus:text-sm peer-focus:text-gray-600">
+            <UserIcon className="absolute left-3 top-3.5 w-5 h-5 text-blue-400" />
+            <label className="absolute left-11 top-2 text-sm text-gray-500 peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 transition-all peer-focus:top-2 peer-focus:text-sm peer-focus:text-gray-600">
               Your Name
             </label>
           </div>
 
-          {/* Floating Email Field */}
           <div className="relative">
             <input
               type="email"
@@ -86,46 +84,43 @@ export function ContactForm() {
               value={formData.email}
               onChange={handleChange}
               required
-              className="peer w-full pl-12 pr-4 pt-5 pb-2 rounded-xl bg-white/80 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent shadow-sm placeholder-transparent transition"
               placeholder="you@example.com"
+              className="peer w-full pl-11 pr-4 py-3 rounded-lg border border-gray-300 bg-white placeholder-transparent focus:outline-none focus:ring-2 focus:ring-blue-400 shadow-sm transition"
             />
-            <EnvelopeIcon className="absolute left-4 top-4 w-5 h-5 text-primary" />
-            <label className="absolute left-12 top-2 text-gray-600 text-sm peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 transition-all peer-focus:top-2 peer-focus:text-sm peer-focus:text-gray-600">
+            <EnvelopeIcon className="absolute left-3 top-3.5 w-5 h-5 text-blue-400" />
+            <label className="absolute left-11 top-2 text-sm text-gray-500 peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 transition-all peer-focus:top-2 peer-focus:text-sm peer-focus:text-gray-600">
               Email Address
             </label>
           </div>
 
-          {/* Floating Message Field */}
           <div className="relative">
             <textarea
               name="message"
               value={formData.message}
               onChange={handleChange}
               required
-              rows={6}
-              className="peer w-full pl-12 pr-4 pt-5 pb-2 rounded-xl bg-white/80 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent shadow-sm placeholder-transparent transition resize-none"
               placeholder="Your message..."
+              rows={5}
+              className="peer w-full pl-11 pr-4 py-3 rounded-lg border border-gray-300 bg-white placeholder-transparent focus:outline-none focus:ring-2 focus:ring-blue-400 shadow-sm resize-none transition"
             />
-            <PencilSquareIcon className="absolute left-4 top-4 w-5 h-5 text-primary" />
-            <label className="absolute left-12 top-2 text-gray-600 text-sm peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 transition-all peer-focus:top-2 peer-focus:text-sm peer-focus:text-gray-600">
+            <PencilSquareIcon className="absolute left-3 top-3.5 w-5 h-5 text-blue-400" />
+            <label className="absolute left-11 top-2 text-sm text-gray-500 peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 transition-all peer-focus:top-2 peer-focus:text-sm peer-focus:text-gray-600">
               Your Message
             </label>
           </div>
 
-          {/* Error Message */}
           {error && (
-            <p className="text-red-500 text-sm font-semibold text-center animate-pulse">
+            <p className="text-sm text-red-500 font-medium text-center animate-pulse">
               {error}
             </p>
           )}
 
-          {/* Submit Button */}
           <button
             type="submit"
             disabled={loading}
             className={`w-full ${
               loading ? 'opacity-60 cursor-not-allowed' : ''
-            } bg-gradient-to-r from-teal-400 to-blue-500 hover:from-teal-500 hover:to-blue-600 text-white font-bold text-lg py-3 rounded-full transition-all duration-300 shadow-md hover:shadow-lg active:scale-95 tracking-wider`}
+            } bg-gradient-to-r from-sky-400 to-indigo-500 hover:from-sky-500 hover:to-indigo-600 text-white font-semibold py-3 rounded-full transition duration-300 shadow-md hover:shadow-lg tracking-wide`}
           >
             {loading ? 'Sending...' : 'Send Message'}
           </button>

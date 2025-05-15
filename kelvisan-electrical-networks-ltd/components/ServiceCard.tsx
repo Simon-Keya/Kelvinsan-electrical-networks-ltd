@@ -1,6 +1,5 @@
 'use client';
 
-import Link from 'next/link';
 import { ReactNode } from 'react';
 
 interface ServiceCardProps {
@@ -31,12 +30,6 @@ export const ServiceCard = ({ title, description, image, icon }: ServiceCardProp
           <h3 className="text-xl font-bold">{title}</h3>
         </div>
         <p className="text-sm text-gray-600">{description}</p>
-
-        <Link href="/contact">
-          <button className="mt-3 inline-block text-sm text-teal-600 font-semibold hover:underline">
-            Learn More
-          </button>
-        </Link>
       </div>
     </div>
   );

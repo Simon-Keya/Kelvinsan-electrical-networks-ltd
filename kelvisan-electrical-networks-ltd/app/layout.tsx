@@ -14,7 +14,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="bg-base-100 text-base-content font-sans min-h-screen flex flex-col">
         <Navbar />
         {/* Added padding-top to offset the fixed navbar height */}
-        <main className="flex-1 w-full px-4 sm:px-8 md:px-12 pt-20">
+        <main className="flex-1 w-full px-4 sm:px-8 md:px-12 pt-18">
           {children}
         </main>
         <Footer />
