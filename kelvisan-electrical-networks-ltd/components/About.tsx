@@ -33,8 +33,8 @@ export const About = () => {
         <meta property="og:type" content="website" />
       </Head>
 
-      <section className="min-h-screen py-16 bg-sky-100 text-gray-800">
-        <div className="container mx-auto px-6 md:px-12">
+      <section className="min-h-screen py-16 bg-sky-100 text-gray-800 w-full">
+        <div className="w-full px-6 lg:px-24">
           {/* Page Title */}
           <motion.h1
             initial={{ opacity: 0, y: -20 }}
@@ -50,7 +50,7 @@ export const About = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-6 max-w-5xl mx-auto mb-16 leading-relaxed"
+            className="space-y-6 max-w-7xl mx-auto mb-16 leading-relaxed"
           >
             <h2 className="text-3xl md:text-4xl font-bold border-b-2 border-gray-300 pb-2">
               Who We Are
@@ -64,7 +64,7 @@ export const About = () => {
           </motion.div>
 
           {/* Mission, Vision, Core Values */}
-          <div className="grid md:grid-cols-3 gap-6 mb-20">
+          <div className="grid md:grid-cols-3 gap-6 mb-20 max-w-7xl mx-auto">
             {[
               {
                 title: 'Our Mission',
@@ -108,7 +108,7 @@ export const About = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="mb-20 max-w-5xl mx-auto"
+            className="mb-20 max-w-7xl mx-auto"
           >
             <h2 className="text-3xl font-bold border-b-2 border-gray-300 pb-2 mb-6">
               Certifications & Achievements
@@ -127,9 +127,9 @@ export const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="flex flex-col-reverse lg:flex-row items-center gap-12"
+            className="flex flex-col-reverse lg:flex-row items-center gap-12 max-w-7xl mx-auto"
           >
-            {/* Text */}
+            {/* Text Content */}
             <div className="flex-1 space-y-6">
               <h2 className="text-3xl md:text-4xl font-bold border-b-2 border-gray-300 pb-2">
                 Why Choose Us?
@@ -156,7 +156,7 @@ export const About = () => {
                 </li>
               </ul>
 
-              {/* Buttons */}
+              {/* CTA Buttons */}
               <div className="mt-6 flex flex-wrap gap-4">
                 <Link href="/contact">
                   <button className="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition duration-300 shadow">

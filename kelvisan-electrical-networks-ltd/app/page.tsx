@@ -9,7 +9,8 @@ import { Testimonials } from '@/components/Testimonial'; // Make sure this is th
 
 export default function HomePage() {
   return (
-    <main className="flex flex-col items-center justify-center w-full overflow-x-hidden bg-blue-200">
+    <main className="w-screen min-h-screen bg-blue-200 overflow-x-hidden">
+
 
       {/* Hero Section */}
       <AnimatedSection>

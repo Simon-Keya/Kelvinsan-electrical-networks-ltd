@@ -29,19 +29,22 @@ const fadeInUp = {
 const electricalServices = [
   {
     title: 'Electrical Installations',
-    description: 'Comprehensive electrical wiring, lighting, and panel installations for residential, commercial, and industrial properties—ensuring safety, compliance, and durability.',
+    description:
+      'Expert installations for wiring, lighting, and panels in homes, businesses, and industries. We prioritize safety, compliance, and long-term performance.',
     image: '/services/electrical.jpg',
     icon: <BoltIcon className="w-8 h-8 text-yellow-400" />,
   },
   {
     title: 'Power Backup Systems',
-    description: 'Tailored inverter systems, high-capacity UPS units, and solar power installations to guarantee uninterrupted power supply during outages and emergencies.',
+    description:
+      'Inverter, UPS, and solar power systems tailored to ensure constant power during outages, keeping operations smooth and uninterrupted.',
     image: '/services/power-backup.jpg',
     icon: <ShieldCheckIcon className="w-8 h-8 text-green-400" />,
   },
   {
     title: 'Electrical Maintenance',
-    description: 'Regular inspections, preventive maintenance, and troubleshooting services to enhance the lifespan and safety of your electrical infrastructure.',
+    description:
+      'Preventive inspections, repairs, and upgrades to keep your electrical systems safe, efficient, and compliant with current regulations.',
     image: '/services/maintenance.jpg',
     icon: <WrenchScrewdriverIcon className="w-8 h-8 text-orange-400" />,
   },
@@ -50,19 +53,22 @@ const electricalServices = [
 const networkingServices = [
   {
     title: 'Network Installations',
-    description: 'Robust structured cabling, enterprise-grade WiFi, and network security solutions to keep your organization reliably connected and secure.',
+    description:
+      'Structured cabling, enterprise WiFi, and firewalled networks for reliable, fast, and secure digital infrastructure.',
     image: '/services/networking.jpg',
     icon: <GlobeAltIcon className="w-8 h-8 text-blue-400" />,
   },
   {
     title: 'Server & Data Solutions',
-    description: 'Installation and management of cloud servers, on-premises databases, and scalable storage solutions to streamline your business operations.',
+    description:
+      'Set up and manage cloud/on-premise servers, scalable databases, and storage for optimized data management.',
     image: '/services/server.jpg',
     icon: <ServerStackIcon className="w-8 h-8 text-purple-400" />,
   },
   {
     title: 'IT Support & Consultancy',
-    description: 'Proactive IT support, cybersecurity audits, and strategic consultancy to optimize your technology stack and safeguard your digital assets.',
+    description:
+      'Dedicated support, threat audits, and IT strategy consultancy to secure and evolve your tech infrastructure.',
     image: '/services/it-support.jpg',
     icon: <ChatBubbleLeftRightIcon className="w-8 h-8 text-cyan-400" />,
   },
@@ -71,13 +77,15 @@ const networkingServices = [
 const softwareServices = [
   {
     title: 'Custom Software Development',
-    description: 'Bespoke software, web applications, and mobile apps designed to automate workflows, enhance customer experience, and scale with your business.',
+    description:
+      'Tailor-made applications and automation solutions to streamline operations, improve UX, and drive growth.',
     image: '/services/software.jpg',
     icon: <SparklesIcon className="w-8 h-8 text-pink-400" />,
   },
   {
     title: 'Smart Home & IoT Solutions',
-    description: 'Integration of smart devices, automation systems, and IoT networks that offer convenience, energy efficiency, and enhanced security for modern living.',
+    description:
+      'Intelligent automation and IoT devices to boost efficiency, comfort, and security in modern spaces.',
     image: '/services/smart-home.jpg',
     icon: <LightBulbIcon className="w-8 h-8 text-lime-400" />,
   },
@@ -91,24 +99,28 @@ export function Services() {
       viewport={{ once: true }}
       className="relative min-h-screen flex items-center justify-center py-24 overflow-hidden"
       id="services"
+      aria-labelledby="services-heading"
     >
-      {/* eslint-disable-next-line @next/next/no-img-element */}
+      {/* Background Image */}
       <div className="absolute inset-0 w-full h-full z-0">
         <img
           src="/service.jpg"
-          alt="Services Background"
+          alt="Kelvinsan service background showing infrastructure and technology"
           className="w-full h-full object-cover object-center brightness-75"
+          loading="lazy"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80" />
       </div>
 
+      {/* Content */}
       <div className="relative z-10 container mx-auto px-6 text-center text-white">
         <motion.h2
+          id="services-heading"
           className="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight"
           variants={fadeInUp}
           custom={0}
         >
-          Our Services
+          Expert Electrical, IT & Software Services
         </motion.h2>
 
         <motion.p
@@ -116,10 +128,10 @@ export function Services() {
           variants={fadeInUp}
           custom={1}
         >
-          At Kelvinsan, we blend cutting-edge technology with hands-on expertise to deliver reliable, scalable, and innovative solutions for homes, businesses, and industries...
+          At Kelvinsan Electrical Networks Ltd, we deliver reliable, scalable, and forward-thinking solutions for homes, businesses, and industries. From installations to innovation—we’ve got you covered.
         </motion.p>
 
-        {/* ✅ Electrical Solutions */}
+        {/* Electrical Services */}
         <motion.div variants={fadeInUp} custom={2}>
           <h3 className="text-2xl font-semibold mb-6 text-blue-200 underline underline-offset-4">
             Electrical Solutions
@@ -133,7 +145,7 @@ export function Services() {
           ))}
         </div>
 
-        {/* ✅ IT & Networking Solutions */}
+        {/* Networking Services */}
         <motion.div variants={fadeInUp} custom={6}>
           <h3 className="text-2xl font-semibold mb-6 text-blue-200 underline underline-offset-4">
             IT & Networking Solutions
@@ -147,7 +159,7 @@ export function Services() {
           ))}
         </div>
 
-        {/* ✅ Software Development */}
+        {/* Software Services */}
         <motion.div variants={fadeInUp} custom={10}>
           <h3 className="text-2xl font-semibold mb-6 text-blue-200 underline underline-offset-4">
             Software & Innovation
@@ -161,7 +173,7 @@ export function Services() {
           ))}
         </div>
 
-        {/* ✅ Divider & CTA */}
+        {/* CTA */}
         <motion.div
           variants={fadeInUp}
           custom={13}
@@ -172,10 +184,15 @@ export function Services() {
           variants={fadeInUp}
           custom={14}
         >
-          Ready to power up your project, connect your business, or go digital? Our experts are here to bring your ideas to life — efficiently and affordably.
+          Ready to power up your next project? Let's discuss how we can support your electrical, IT, or digital transformation goals.
         </motion.p>
-        <motion.a href="/contact" variants={fadeInUp} custom={15}>
-          <button className="mt-6 bg-teal-400 hover:bg-teal-500 text-black font-semibold px-8 py-3 rounded-full transition duration-300 shadow-lg">
+        <motion.a
+          href="/contact"
+          variants={fadeInUp}
+          custom={15}
+          aria-label="Contact Kelvinsan for services"
+        >
+          <button className="mt-6 bg-teal-400 hover:bg-teal-500 text-black font-semibold px-8 py-3 rounded-full transition duration-300 shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-300">
             Contact Us Today
           </button>
         </motion.a>
