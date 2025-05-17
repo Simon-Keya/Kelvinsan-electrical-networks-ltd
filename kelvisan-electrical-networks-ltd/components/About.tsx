@@ -42,7 +42,7 @@ export const About = () => {
             transition={{ duration: 0.6 }}
             className="text-4xl md:text-5xl font-extrabold text-center mb-12"
           >
-            About Kelvinsan Electrical Networks Ltd
+            About Us
           </motion.h1>
 
           {/* Who We Are */}

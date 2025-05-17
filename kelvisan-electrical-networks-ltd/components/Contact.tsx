@@ -56,7 +56,7 @@ export default function Contact() {
             </div>
 
             {/* Contact Details */}
-            <div className="card bg-blue-200 shadow-lg p-6 rounded-xl border border-gray-200">
+            <div className="bg-blue-200 shadow-lg p-6 rounded-xl border border-gray-200">
               <h2 className="text-2xl font-semibold text-primary mb-4">
                 Contact Information
               </h2>
@@ -99,16 +99,13 @@ export default function Contact() {
             </div>
           </motion.aside>
 
-          {/* Contact Form */}
+          {/* Contact Form (No border or title now) */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="card bg-blue-200 shadow-xl p-8 rounded-xl border border-gray-300"
+            className="bg-blue-200 shadow-xl p-8 rounded-xl"
           >
-            <h2 className="text-2xl font-semibold mb-6 text-primary">
-              Send Us a Message
-            </h2>
             <ContactForm />
           </motion.div>
         </div>

@@ -128,7 +128,7 @@ export function Services() {
           variants={fadeInUp}
           custom={1}
         >
-          At Kelvinsan Electrical Networks Ltd, we deliver reliable, scalable, and forward-thinking solutions for homes, businesses, and industries. From installations to innovation—we’ve got you covered.
+          At Kelvinsan Electrical Networks Ltd, we deliver reliable, scalable, and forward-thinking solutions for homes, businesses, and industries. From installations to innovation—we certainly got you covered.
         </motion.p>
 
         {/* Electrical Services */}
@@ -184,7 +184,7 @@ export function Services() {
           variants={fadeInUp}
           custom={14}
         >
-          Ready to power up your next project? Let's discuss how we can support your electrical, IT, or digital transformation goals.
+          Ready to power up your next project? Let us discuss how we can support your electrical, IT, or digital transformation goals.
         </motion.p>
         <motion.a
           href="/contact"
