@@ -12,7 +12,7 @@ export const Hero = () => {
       {/* ✅ Background Image Wrapper */}
       <div className="absolute inset-0 w-full h-full z-0">
         <Image
-          src="/background-hero.jpg"
+          src="/hero.jpg"
           alt="Background"
           fill
           priority
